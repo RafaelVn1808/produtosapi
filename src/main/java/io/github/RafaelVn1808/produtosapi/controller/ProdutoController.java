@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProdutoController {
 
     @PostMapping//enviar dados/Criar recursos no setor
-    public void salva(@RequestBody Produto produto){
+    public Produto salva(@RequestBody Produto produto){
         System.out.println("Produto recebido: " + produto);
+        return produto;
     }
 }
